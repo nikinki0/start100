@@ -20,25 +20,38 @@ th {
 </head>
 <body>
 
-  <button id="start" onclick="fun1()">start</button>
-
+  <input type="button" value="Generate a table" onclick="generateTable()" />
 <script>
-start.onclick = function() {
+function generateTable() {
+  // creates a <table> element and a <tbody> element
+  const tbl = document.createElement("table");
+  const tblBody = document.createElement("tbody");
 
-  let i = 0;
-  while (i < 3) { // выводит 0, затем 1, затем 2
-    
-    <table border="1
-    ">
-      <tr>
-       <td> 1</td>
-       <th> 2</th>
-      </tr>
-    </table>
-   
-    i++;
+  // creating all cells
+  for (let i = 0; i < 33; i++) {
+    // creates a table row
+    const row = document.createElement("tr");
+
+    for (let j = 0; j < 33; j++) {
+      // Create a <td> element and a text node, make the text
+      // node the contents of the <td>, and put the <td> at
+      // the end of the table row
+      const cell = document.createElement("td");
+      const cellText = document.createTextNode(`ga`);
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+    }
+
+    // add the row to the end of the table body
+    tblBody.appendChild(row);
   }
 
+  // put the <tbody> in the <table>
+  tbl.appendChild(tblBody);
+  // appends <table> into <body>
+  document.body.appendChild(tbl);
+  // sets the border attribute of tbl to '2'
+  tbl.setAttribute("border", "2");
 }
 </script>
 </body>
