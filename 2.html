@@ -41,6 +41,13 @@ for (let i = 0; i < count; ++i) {
 console.log(a);
 
 
+let text = a;
+      const myArray = text.split(",");
+
+alert (myArray[0] );
+
+
+
 
 function generateTable() {
   // creates a <table> element and a <tbody> element
@@ -53,6 +60,9 @@ function generateTable() {
     const row = document.createElement("tr");
 
     for (let j = 0; j < 10; j++) {
+
+   
+
       // Create a <td> element and a text node, make the text
       // node the contents of the <td>, and put the <td> at
       // the end of the table row
