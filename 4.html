@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <style>
+    #train {
+      position: relative;
+      cursor: pointer;
+	  
+		    height: 100px;
+			   width: 100px;
+    }
+	
+#train {
+ background-color: black;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 99s ease-in-out infinite alternate;
+  -moz-animation: glow 99s ease-in-out infinite alternate;
+  animation: glow 99s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 3px #FF00FF, 0 0 5px #FF00FF, 0 0 8px #e60073, 0 0 10px #e60073, 0 0 12px #e60073, 0 0 15px #e60073, 0 0 18px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 5px #FF00FF, 0 0 8px #ff4da6, 0 0 10px #ff4da6, 0 0 12px #ff4da6, 0 0 15px #ff4da6, 0 0 18px #ff4da6, 0 0 20px #ff4da6;
+  }
+}
+  </style>
+</head>
+
+<body>
+ <button id="train" onclick="fun1()" style="">кнопка1</button>
+
+</body>
+  <script>
+     train.onclick = function() {
+let i = 0
+while (i < 99) {  
+i++;
+train.style.left = i + 'px';}
+
+
+setTimeout(() => {  
+let f = 0
+while (f < 99) {  
+f++;
+train.style.top = f + 'px';}
+; }, 200);
+
+
+     
+    }
+  </script>
+
+
+
+
+</html>
