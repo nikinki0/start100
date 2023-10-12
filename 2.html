@@ -22,17 +22,34 @@ th {
 
   <input type="button" value="Generate a table" onclick="generateTable()" />
 <script>
+
+const range = 101; // максимальное значение (1..100 включительно)
+const count = 100;      // кол-во требуемых чисел
+
+let m = {};
+let a = [];
+for (let i = 0; i < count; ++i) {
+  let r = Math.floor(Math.random() * (range - i));
+  a.push(((r in m) ? m[r] : r) + 1);
+  let l = range - i - 1;
+  m[r] = (l in m) ? m[l] : l;
+}
+
+console.log(a);
+
+
+
 function generateTable() {
   // creates a <table> element and a <tbody> element
   const tbl = document.createElement("table");
   const tblBody = document.createElement("tbody");
 
   // creating all cells
-  for (let i = 0; i < 33; i++) {
+  for (let i = 0; i < 10; i++) {
     // creates a table row
     const row = document.createElement("tr");
 
-    for (let j = 0; j < 33; j++) {
+    for (let j = 0; j < 10; j++) {
       // Create a <td> element and a text node, make the text
       // node the contents of the <td>, and put the <td> at
       // the end of the table row
