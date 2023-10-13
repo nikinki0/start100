@@ -23,53 +23,40 @@ th {
 </head>
 <body>
 
-  <input type="button" value="Generate a table" onclick="generateTable()" />
+ 
 <script>
 
+ 
+// let from=1, to=100, n = 100;
+ //let result = [...Array(to-from+1).keys()].map(i=>i+from) // range
+ //  .reduce((arr, elt) => (arr.splice(Math.random() * (arr.length + 1), 0, elt), arr), []) // shuffle
+  // .slice(0, n); // slice n
 
- let from=1, to=100, n = 100;
- let result = [...Array(to-from+1).keys()].map(i=>i+from) // range
-   .reduce((arr, elt) => (arr.splice(Math.random() * (arr.length + 1), 0, elt), arr), []) // shuffle
-   .slice(0, n); // slice n
+ //console.log(result)
 
- console.log(result)
+function addTable() {
+  var myTableDiv = document.getElementById("myDynamicTable");
 
+  var table = document.createElement('TABLE');
+  table.border = '1';
 
-function generateTable() {
-  // creates a <table> element and a <tbody> element
-  const tbl = document.createElement("table");
-  const tblBody = document.createElement("tbody");
+  var tableBody = document.createElement('TBODY');
+  table.appendChild(tableBody);
 
-  // creating all cells
-  for (let i = 0; i < 10; i++) {
-    // creates a table row
+  for (var i = 0; i < 10; i++) {
+    var tr = document.createElement('TR');
+    tableBody.appendChild(tr);
 
-
-    const row = document.createElement("tr");
-
-    for (let td = 0; td < 10; td++) {
-
-
-      // Create a <td> element and a text node, make the text
-      // node the contents of the <td>, and put the <td> at
-      // the end of the table row
-      const cell = document.createElement("td");
-      const cellText = document.createTextNode(result [i]);
-      cell.appendChild(cellText);
-      row.appendChild(cell);
+    for (var j = 0; j < 10; j++) {
+      var td = document.createElement('TD');
+      td.width = '18';
+      td.appendChild(document.createTextNode(result [i]));
+      tr.appendChild(td);
     }
-
-    // add the row to the end of the table body
-    tblBody.appendChild(row);
   }
-
-  // put the <tbody> in the <table>
-  tbl.appendChild(tblBody);
-  // appends <table> into <body>
-  document.body.appendChild(tbl);
-  // sets the border attribute of tbl to '2'
-  tbl.setAttribute("border", "2");
+  myTableDiv.appendChild(table);
 }
+addTable();
 </script>
 </body>
 </html>
