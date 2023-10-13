@@ -36,13 +36,17 @@ th {
 
 
 
-const a = result.split(",");
-
-alert (a)
 
 
 
 
+for (let d = 0; d < 10; d++) {
+
+let c = result [4]
+
+
+}
+alert (c)
 function generateTable() {
   // creates a <table> element and a <tbody> element
   const tbl = document.createElement("table");
@@ -51,9 +55,11 @@ function generateTable() {
   // creating all cells
   for (let i = 0; i < 10; i++) {
     // creates a table row
+
+
     const row = document.createElement("tr");
 
-    for (let j = 0; j < 10; j++) {
+    for (let td = 0; td < 10; td++) {
 
    
 
@@ -61,7 +67,7 @@ function generateTable() {
       // node the contents of the <td>, and put the <td> at
       // the end of the table row
       const cell = document.createElement("td");
-      const cellText = document.createTextNode(`ga`);
+      const cellText = document.createTextNode(`result [td]`);
       cell.appendChild(cellText);
       row.appendChild(cell);
     }
