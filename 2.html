@@ -35,11 +35,6 @@ th {
  console.log(result)
 
 
-
-
-
-
-
 function generateTable() {
   // creates a <table> element and a <tbody> element
   const tbl = document.createElement("table");
@@ -59,7 +54,7 @@ function generateTable() {
       // node the contents of the <td>, and put the <td> at
       // the end of the table row
       const cell = document.createElement("td");
-      const cellText = document.createTextNode(result [0]);
+      const cellText = document.createTextNode(result [i]);
       cell.appendChild(cellText);
       row.appendChild(cell);
     }
