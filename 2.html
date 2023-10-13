@@ -40,13 +40,6 @@ th {
 
 
 
-for (let d = 0; d < 10; d++) {
-
-let c = result [4]
-
-
-}
-alert (c)
 function generateTable() {
   // creates a <table> element and a <tbody> element
   const tbl = document.createElement("table");
@@ -61,13 +54,12 @@ function generateTable() {
 
     for (let td = 0; td < 10; td++) {
 
-   
 
       // Create a <td> element and a text node, make the text
       // node the contents of the <td>, and put the <td> at
       // the end of the table row
       const cell = document.createElement("td");
-      const cellText = document.createTextNode(`result [td]`);
+      const cellText = document.createTextNode(result [0]);
       cell.appendChild(cellText);
       row.appendChild(cell);
     }
