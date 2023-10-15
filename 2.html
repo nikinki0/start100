@@ -23,17 +23,23 @@ th {
 </head>
 <body>
 
- 
+  <div id="myDynamicTable"></div>
+
 <script>
+//цифры
+ let from=1, to=100, n = 100;
+ let result = [...Array(to-from+1).keys()].map(i=>i+from) // range
+   .reduce((arr, elt) => (arr.splice(Math.random() * (arr.length + 1), 0, elt), arr), []) // shuffle
+   .slice(0, n); // slice n
 
+ console.log(result)
  
-// let from=1, to=100, n = 100;
- //let result = [...Array(to-from+1).keys()].map(i=>i+from) // range
- //  .reduce((arr, elt) => (arr.splice(Math.random() * (arr.length + 1), 0, elt), arr), []) // shuffle
-  // .slice(0, n); // slice n
+//result [i]
 
- //console.log(result)
 
+
+
+//таблица 
 function addTable() {
   var myTableDiv = document.getElementById("myDynamicTable");
 
@@ -43,13 +49,13 @@ function addTable() {
   var tableBody = document.createElement('TBODY');
   table.appendChild(tableBody);
 
-  for (var i = 0; i < 10; i++) {
+  for (var i = 0; i < 20; i++) {
     var tr = document.createElement('TR');
     tableBody.appendChild(tr);
 
-    for (var j = 0; j < 10; j++) {
+    for (var j = 0; j < 5; j++) {
       var td = document.createElement('TD');
-      td.width = '18';
+      td.width = '28';
       td.appendChild(document.createTextNode(result [i]));
       tr.appendChild(td);
     }
