@@ -27,7 +27,7 @@ th {
 
 <script>
 //цифры
- let from=1, to=100, n = 100;
+ let from=1, to=10, n = 10;
  let result = [...Array(to-from+1).keys()].map(i=>i+from) // range
    .reduce((arr, elt) => (arr.splice(Math.random() * (arr.length + 1), 0, elt), arr), []) // shuffle
    .slice(0, n); // slice n
@@ -54,8 +54,11 @@ function addTable() {
     for (var j = 0; j < 10; j++) {
       var td = document.createElement('TD');
       td.width = '20';
-      td.appendChild(document.createTextNode(result [i+1]));
+
+      td.appendChild(document.createTextNode(result [i]));
+      
       tr.appendChild(td);
+
     }
   }
   myTableDiv.appendChild(table);
