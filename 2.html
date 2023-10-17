@@ -27,12 +27,13 @@ th {
 
 <script>
 //цифры
- let from=1, to=10, n = 10;
+ let from=1, to=100, n = 100;
  let result = [...Array(to-from+1).keys()].map(i=>i+from) // range
    .reduce((arr, elt) => (arr.splice(Math.random() * (arr.length + 1), 0, elt), arr), []) // shuffle
    .slice(0, n); // slice n
 
- console.log(result)
+
+
  
 //result [i]
 
@@ -47,6 +48,8 @@ function addTable() {
   var tableBody = document.createElement('TBODY');
   table.appendChild(tableBody);
 
+  let k = 1; 
+
   for (var i = 0; i < 10; i++) {
     var tr = document.createElement('TR');
     tableBody.appendChild(tr);
@@ -55,15 +58,33 @@ function addTable() {
       var td = document.createElement('TD');
       td.width = '20';
 
-      td.appendChild(document.createTextNode(result [i]));
+
       
+    
+    
       tr.appendChild(td);
 
-    }
+
+td.textContent = result [k];
+
+k++;
+
+
+    } 
+
+
+    
   }
   myTableDiv.appendChild(table);
 }
+
+
 addTable();
+
+  //td.appendChild(document.createTextNode(result [1]))
+  //td.textContent = 'x';
+ 
+
 </script>
 </body>
 </html>
