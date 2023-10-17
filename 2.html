@@ -27,12 +27,12 @@ th {
 
 <script>
 //цифры
- let from=1, to=100, n = 100;
+ let from=1, to=25, n = 25;
  let result = [...Array(to-from+1).keys()].map(i=>i+from) // range
    .reduce((arr, elt) => (arr.splice(Math.random() * (arr.length + 1), 0, elt), arr), []) // shuffle
    .slice(0, n); // slice n
 
-
+console.log(result)
 
  
 //result [i]
@@ -50,11 +50,11 @@ function addTable() {
 
   let k = 1; 
 
-  for (var i = 0; i < 10; i++) {
+  for (var i = 0; i < 5; i++) {
     var tr = document.createElement('TR');
     tableBody.appendChild(tr);
 
-    for (var j = 0; j < 10; j++) {
+    for (var j = 0; j < 5; j++) {
       var td = document.createElement('TD');
       td.width = '20';
 
