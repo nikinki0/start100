@@ -18,14 +18,30 @@ th {
 
  padding: 0.2em; 
 }
+
+
     </style>
 
 </head>
 <body>
 
+  <a href="#" onclick="reload_confirm(); return false;" >
+    Обновить страницу
+  </a>
+ 
+ <!-- <meta http-equiv="refresh" content="5" -->
+
   <div id="myDynamicTable"></div>
 
 <script>
+
+function reload_confirm(){
+	if (confirm('Вы действительно хотите обновить страницу?')) {
+		window.location.reload();
+	}
+}
+
+
 //цифры
  let from=1, to=25, n = 25;
  let result = [...Array(to-from+1).keys()].map(i=>i+from) // range
