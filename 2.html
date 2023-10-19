@@ -74,7 +74,7 @@ function addTable() {
       var td = document.createElement('TD');
       td.width = '20';
 
-      td.id =  k;
+      td.id =  "x";
       
     
     
@@ -98,12 +98,12 @@ k++;
 addTable();
 
 const colors = ['red','blue'];
-	var i=1;
-	while (i<=9) {
-		var tdid = document.getElementById();
+	var d=1;
+	while (i<=25) {
+		var tdid = document.getElementById('x' + i);
 		var randcolor = colors[Math.floor(Math.random()*colors.length)];
 		tdid.style.background = randcolor;
-		i++;
+		d++;
 	}
 
 
