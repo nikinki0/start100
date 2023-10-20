@@ -63,36 +63,29 @@ function addTable() {
       td.width = '20';
 
       td.id =  "x";
-      
-    
+       
     
       tr.appendChild(td);
 
-
 td.textContent = result [k];
-
 k++;
-
-
-    } 
-
-
-    
+    }    
   }
   myTableDiv.appendChild(table);
 }
-
-
 addTable();
+
+//цвет
 
 const colors = ['red','blue'];
 	var d=1;
-	while (d<=25) {
+	while (d<=9) {
 		var tdid = document.getElementById('x' + d);
 		var randcolor = colors[Math.floor(Math.random()*colors.length)];
 		tdid.style.background = randcolor;
 		d++;
 	}
+
 
 
 </script>
