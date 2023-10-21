@@ -14,7 +14,7 @@
 <body>
 
   <a href="#" onclick="reload_confirm(); return false;" >
-    Обновить страницу
+    заново
   </a>
  
  <!-- <meta http-equiv="refresh" content="5" -->
@@ -24,7 +24,7 @@
 <script>
 
 function reload_confirm(){
-	if (confirm('Вы действительно хотите обновить страницу?')) {
+	if (confirm('Вы готовы начять заново ?')) {
 		window.location.reload();
 	}
 }
@@ -62,9 +62,8 @@ function addTable() {
       var td = document.createElement('TD');
       td.width = '20';
 
-      td.id =  "x";
-       
-    
+      td.id = 'x' + k;
+
       tr.appendChild(td);
 
 td.textContent = result [k];
