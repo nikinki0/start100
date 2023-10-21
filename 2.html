@@ -6,23 +6,27 @@
 
   <style> 
  table {
-    width: 300px; /* Ширина таблицы */
-    border: 1px solid green; /* Рамка вокруг таблицы */
+ 
+    border: 1px solid rgb(36, 80, 192); /* Рамка вокруг таблицы */
     margin: auto; /* Выравниваем таблицу по центру окна  */
    }
    td {
     text-align: center; /* Выравниваем текст по центру ячейки */
    }
+   #button1{
+  background-color: #4CAF50;
+  padding: 14px 40px;
+  margin: auto;
+} /* Green */
 
     </style>
 
 </head>
 <body>
 
-  <a href="#" onclick="reload_confirm(); return false;" >
-    заново
-  </a>
- 
+  <button type="button" id="red">red</button>
+  <button type="button" id="blue">blue</button>
+  <input type="button" value="Начять заново" id="button1" onClick="window.location.reload()">
  <!-- <meta http-equiv="refresh" content="5" -->
 
   <div id="myDynamicTable"></div>
@@ -92,7 +96,7 @@ const colors = ['red','blue'];
 		tdid.style.background = randcolor;
 		d++;
 	}
-
+//перезагрузк 
 
 //кнопки
 
