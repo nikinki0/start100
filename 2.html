@@ -60,7 +60,9 @@ function addTable() {
 
     for (var j = 0; j < 5; j++) {
       var td = document.createElement('TD');
-      td.width = '20';
+      td.width = '40';
+      td.height = '40';
+
 
       td.id = 'x' + k;
 
@@ -75,21 +77,18 @@ k++;
 addTable();
 
 //цвет
-
-
-
-
 const colors = ['red','blue'];
 	var d=0;
 	while (d<=25) {
 		var tdid = document.getElementById('x' + d);
+    //alert (tdid)
 		var randcolor = colors[Math.floor(Math.random()*colors.length)];
 		tdid.style.background = randcolor;
 		d++;
 	}
 
 
-
+//кнопки
 
 </script>
 </body>
