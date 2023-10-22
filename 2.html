@@ -100,16 +100,7 @@ k++;
 }
 addTable();
 
-//цвет
-const colors = ['red','blue'];
-	var d=0;
-	while (d<=25) {
-		var tdid = document.getElementById('x' + d);
-    //alert (tdid)
-		var randcolor = colors[Math.floor(Math.random()*colors.length)];
-		tdid.style.background = randcolor;
-		d++;
-	}
+
 //перезагрузк 
 
 //кнопки
@@ -120,34 +111,27 @@ function myFunction2() {
   alert("s");
 }
 //клавеатура
-document.addEventListener('keydown', function(event) {
-    if (event.ctrlKey && event.key === 'K') {
-        alert("Вы нажали CTRL+K");
-    }
-});
-
-
-
-
 document.onkeydown = function(e) {
-    if (e.keyCode == 65) {
-        alert('a pressed');
+    if (e.keyCode == "A".charCodeAt()) {
+        alert("a pressed");
     }
 }
 
-
 document.onkeydown = function(e) {
-    if (e.keyCode == 83) {
-        alert('s pressed');
+    if (e.keyCode == "S".charCodeAt()) {
+        alert("S pressed");
     }
 }
-
-
-
-
-
-
-
+//цвет
+const colors = ['red','blue'];
+	var d=0;
+	while (d<=25) {
+		var tdid = document.getElementById('x' + d);
+    //alert (tdid)
+		var randcolor = colors[Math.floor(Math.random()*colors.length)];
+		tdid.style.background = randcolor;
+		d++;
+	}
 </script>
 </body>
 </html>
