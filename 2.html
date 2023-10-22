@@ -12,6 +12,7 @@
    }
    td {
     text-align: center; /* Выравниваем текст по центру ячейки */
+    font-size: 2.4rem;
    }
    #button1{
   background-color: #4CAF50;
@@ -19,13 +20,26 @@
   margin: auto;
 } /* Green */
 
+#red{
+  background-color: #ff0000;
+  padding: 14px 40px;
+  margin: auto;
+} 
+#blue{
+  background-color: #001aff;
+  padding: 14px 40px;
+  margin: auto;
+} 
+
     </style>
 
 </head>
 <body>
 
-  <button type="button" id="red">red</button>
-  <button type="button" id="blue">blue</button>
+  <button type="button" id="red" onclick="myFunction1()">red</button>
+
+  <button type="button" id="blue" onclick="myFunction2()">blue</button>
+
   <input type="button" value="Начять заново" id="button1" onClick="window.location.reload()">
  <!-- <meta http-equiv="refresh" content="5" -->
 
@@ -70,8 +84,8 @@ function addTable() {
 
     for (var j = 0; j < 5; j++) {
       var td = document.createElement('TD');
-      td.width = '40';
-      td.height = '40';
+      td.width = '80';
+      td.height = '80';
 
 
       td.id = 'x' + k;
@@ -99,6 +113,18 @@ const colors = ['red','blue'];
 //перезагрузк 
 
 //кнопки
+function myFunction1() {
+  alert("a");
+}
+function myFunction2() {
+  alert("s");
+}
+//клавеатура
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.key === 'K') {
+        alert("Вы нажали CTRL+K");
+    }
+});
 
 </script>
 </body>
