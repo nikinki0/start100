@@ -63,7 +63,7 @@ function reload_confirm(){
 console.log(result)
 
  
-//result [i]
+
 
 
 //таблица 
@@ -111,6 +111,11 @@ function myFunction2() {
   alert("s");
 }
 //клавеатура
+document.onkeydown = function(e) {
+    if (e.keyCode == 83) {
+        alert('ESC pressed');
+    }
+}
 document.onkeydown = function(e) {
     if (e.keyCode == "A".charCodeAt()) {
         alert("a pressed");
