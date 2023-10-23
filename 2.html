@@ -110,28 +110,31 @@ function myFunction1() {
 function myFunction2() {
   alert("s");
 }
-//клавеатура
+//клавиатура
 document.onkeydown = function(e) {
     if (e.keyCode == 83) {
-        alert('ESC pressed');
+      if (id.style.background = red ) {
+  alert ("yes")
+} 
     }
-}
-document.onkeydown = function(e) {
     if (e.keyCode == "A".charCodeAt()) {
         alert("a pressed");
-    }
-}
+    }}
+
 
 
 //цвет
 const colors = ['red','blue'];
 	var d=0;
-	while (d<=25) {
+	while (d<=24) {
 		var tdid = document.getElementById('x' + d);
     //alert (tdid)
 		var randcolor = colors[Math.floor(Math.random()*colors.length)];
+   
+    tdid.class = randcolor
 		tdid.style.background = randcolor;
 		d++;
+  
 	}
 </script>
 </body>
