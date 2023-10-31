@@ -38,7 +38,7 @@
 <script>
 
 let ca = 0;
-
+let err = 0;
 function reload_confirm(){
 	if (confirm('Вы готовы начять заново ?')) {
 		window.location.reload();
@@ -80,7 +80,7 @@ function addTable() {
       td.height = '80';
 
 
-      td.id = 'x' + k;
+      td.id = 'x' + result[k];
 
       tr.appendChild(td);
 
@@ -95,8 +95,8 @@ addTable();
 
 //цвет
 const colors = ['red','blue'];
-	var d=0;
-	while (d<=24) {
+	var d=1;
+	while (d<=25) {
 		var tdid = document.getElementById('x' + d);
     
    
@@ -126,12 +126,12 @@ document.onkeydown = function(e) {
 
      ca++;
 
-     alert("синий" + ca);
+     alert("blue" );
 
 
-     if (ca == 24) {
+     if (ca == 25) {
   alert(" конец");
-  let a = 0;
+  
 }
 
     }
@@ -141,20 +141,27 @@ document.onkeydown = function(e) {
       color_btn = "red";
       
        ca++;
-        alert("красный" + ca);
+        alert("red" );
+     
 
-
-
-     if (ca == 24) {
+     if (ca == 25) {
   alert(" конец");
-  let ca = 0;
+  
 }
 
     }
     var vrid = document.getElementById('x' + ca);
   //alert (vrid.className);
   let color_ceil = vrid.className;
-  alert (color_ceil)
+alert(color_btn == color_ceil); 
+if (color_btn != color_ceil)
+{
+  err++;
+  if (err > 4){
+    alert ("конец")
+
+  }
+}
 }
 
 
