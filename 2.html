@@ -37,6 +37,8 @@
 
 <script>
 
+let ca = 0;
+
 function reload_confirm(){
 	if (confirm('Вы готовы начять заново ?')) {
 		window.location.reload();
@@ -91,35 +93,16 @@ k++;
 addTable();
 
 
-let a = 0
-
-
-
-
-//клавиатура
-document.onkeydown = function(e) {
-    if (e.keyCode == 65) {
-        alert('привет синий' );
-     a++
-     alert(a)
-    }
-
-    if (e.keyCode == 83) {
-        alert('привет красный' );
-        a++
-        alert(a)
-    }
-}
-
 //цвет
 const colors = ['red','blue'];
 	var d=0;
 	while (d<=24) {
 		var tdid = document.getElementById('x' + d);
-    //alert (tdid)
+    
+   
 		var randcolor = colors[Math.floor(Math.random()*colors.length)];
    
-    tdid.className = randcolor
+    tdid.className = randcolor;
 		tdid.style.background = randcolor;
 
   
@@ -128,6 +111,53 @@ const className = tdid.className;
 console.log(className); 
 		d++;
 	}
+
+
+
+
+
+
+
+//клавиатура
+document.onkeydown = function(e) {
+    if (e.keyCode == 65) {
+     
+      color_btn = "blue";
+
+     ca++;
+
+     alert("синий" + ca);
+
+
+     if (ca == 24) {
+  alert(" конец");
+  let a = 0;
+}
+
+    }
+
+    if (e.keyCode == 83) {
+      
+      color_btn = "red";
+      
+       ca++;
+        alert("красный" + ca);
+
+
+
+     if (ca == 24) {
+  alert(" конец");
+  let ca = 0;
+}
+
+    }
+    var vrid = document.getElementById('x' + ca);
+  //alert (vrid.className);
+  let color_ceil = vrid.className;
+  alert (color_ceil)
+}
+
+
 </script>
 </body>
 </html>
