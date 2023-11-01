@@ -131,15 +131,16 @@ document.onkeydown = function(e) {
 }
 
     }
+    //сравнение цветов
     var vrid = document.getElementById('x' + ca);
-  //alert (vrid.className);
+  
   let color_ceil = vrid.className;
 alert (color_btn==color_ceil)
 if (color_btn != color_ceil)
 {
   err++;
   if (err > 4){
-    alert ("конец")
+    alert ("проигрышь")
     location.reload()
   }
 }
