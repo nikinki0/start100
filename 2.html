@@ -6,7 +6,6 @@
 
   <style> 
  table {
- 
     border: 1px solid rgb(36, 80, 192); /* Рамка вокруг таблицы */
     margin: auto; /* Выравниваем таблицу по центру окна  */
    }
@@ -26,12 +25,10 @@
 </head>
 <body>
  
-
-
-
+ 
 
   <input type="button" value="Начять заново" id="button1" onClick="window.location.reload()">
- <!-- <meta http-equiv="refresh" content="5" -->
+ 
 
   <div id="myDynamicTable"></div>
 
@@ -55,7 +52,6 @@ function reload_confirm(){
 console.log(result)
 
  
-let s = document.getElementById('timer');
 
  
 //таблица 
@@ -106,31 +102,19 @@ const colors = ['red','blue'];
 		tdid.style.background = randcolor;
 
   
-    
 const className = tdid.className;
 console.log(className); 
 		d++;
 	}
-
-
-
-
-
-
 
 //клавиатура
 document.onkeydown = function(e) {
     if (e.keyCode == 65) {
      
       color_btn = "blue";
-
      ca++;
-
-     alert("blue" );
-
-
      if (ca == 25) {
-  alert(" конец");
+  alert(" победа");
   
 }
 
@@ -141,11 +125,8 @@ document.onkeydown = function(e) {
       color_btn = "red";
       
        ca++;
-        alert("red" );
-     
-
      if (ca == 25) {
-  alert(" конец");
+  alert(" победа");
   
 }
 
@@ -153,13 +134,13 @@ document.onkeydown = function(e) {
     var vrid = document.getElementById('x' + ca);
   //alert (vrid.className);
   let color_ceil = vrid.className;
-alert(color_btn == color_ceil); 
+alert (color_btn==color_ceil)
 if (color_btn != color_ceil)
 {
   err++;
   if (err > 4){
     alert ("конец")
-
+    location.reload()
   }
 }
 }
